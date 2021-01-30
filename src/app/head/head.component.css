@@ -1,0 +1,86 @@
+body{
+    background-image: url('/assets/a.jpg');
+    background-repeat:no-repeat;
+    height: 100%; width: 100%;
+    /* background-size:100% auto; */
+}
+#login-box{
+    background-image: url('/assets/c.jpg');
+    width:30%;
+    height:auto;
+    margin:0 auto;
+    /* margin-top:13%; */
+    text-align:center;
+   
+    padding:20px 50px;
+    }
+#login-box h1{
+    color:#fff;
+}
+#login-box .form .item{
+    margin-top:20px;
+}
+#login-box .form .item i{
+    font-size:18px;
+    color:#fff;
+}
+#login-box .form .item input{
+    width:180px;
+    font-size:18px;
+    border:0;
+    border-bottom:2px solid #fff;
+    padding:5px 10px;
+    background:#ffffff00;
+    color:#fff;
+}
+#login-box 	button{
+    margin-top:20px;
+    width:180px;
+    height:30px;
+    font-size:20px;
+    font-weight:700;
+    color:#fff;
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+    border:0;
+    border-radius:15px;
+}
+
+    
+#code{ width: 100px; height: 50px; background-color: lightblue; font-size: 50px; letter-spacing: 50px; } 
+/* .box{
+	position: relative;
+	height: 200px; width: 300px
+}
+.back{
+	background-image: url('../assets/b.jpg');
+	height: 100%; width: 100%;
+}
+.modal, .desc{
+	position:absolute;
+	height: 20%; width: 100%;
+	bottom: 0; color: white
+}
+.modal{
+	background: rgba(0,0,0,.5)
+} */
+/* .box{
+	/* position: relative; height:1300px; width:1200px; */
+    /* background: fixed url('../assets/ccc.jpg'); */
+   
+  /* } * */
+
+.blur-modal{
+	position: absolute; height:50px; width:300px;
+	top: 10px;
+	/* background: fixed url('../assets/a.jpg'); */
+	/* filter:blur(1rem) */
+}
+.blur-modal img{
+    width: 80%;}
+
+.black-modal{
+	position: absolute; height:50px; width:240px;
+	top: 280px;
+	background: rgba(0,0,0,.2);
+	color: white
+}
