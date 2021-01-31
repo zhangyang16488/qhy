@@ -1,0 +1,13 @@
+#kuangjia h1{
+    color:rgb(255, 255, 255);
+}
+#kuangjia{
+    background-image: url('/assets/c.jpg');
+    width:30%;
+    height:auto;
+    margin:0 auto;
+    /* margin-top:13%; */
+    text-align:center;
+   
+    padding:30px 50px;
+    }

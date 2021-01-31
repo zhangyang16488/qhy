@@ -1,1 +1,17 @@
-<p>ga9</p>
+<!-- <h1>账号或密码错误</h1>
+<div>
+ <button (click)="cccc()">注册/登入</button>
+ <button mat-button (click)="onNoClick()">No Thanks</button> -->
+<!-- </div> --> 
+<h1 mat-dialog-title>Hi {{data.namee}}</h1>
+<div mat-dialog-content>
+  <p>What's your favorite animal?</p>
+  <mat-form-field>
+    <mat-label>Favorite Animal</mat-label>
+    <input matInput [(ngModel)]="data.animal"> 
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div>
