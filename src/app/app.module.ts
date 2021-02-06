@@ -15,6 +15,8 @@ import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-
 import { FormsModule }   from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { WwwComponent } from './www/www.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MatInputModule } from '@angular/material/input';
     MessagedetailComponent,
     NewComponent,
     // MatDialogModule,
-    DialogOverviewExampleDialogComponent
+    DialogOverviewExampleDialogComponent,
+    WwwComponent,
+  
  
   ],
   imports: [

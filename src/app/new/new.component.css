@@ -1,13 +1,64 @@
-#kuangjia h1{
-    color:rgb(255, 255, 255);
+.main{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    /* background: rgb(0, 68, 255); */
 }
-#kuangjia{
-    background-image: url('/assets/c.jpg');
-    width:30%;
-    height:auto;
-    margin:0 auto;
-    /* margin-top:13%; */
-    text-align:center;
-   
-    padding:30px 50px;
+.titlediv{
+    display:flex; 
+     /* 弹性布局  */
+    height:10%;
+    width:100%;
+    background: red;
+    align-items: center;
+    
+    /* 垂直居中 */
+
+}
+.titlediv div{
+    width: 100%;
+    font-size:30px;
+    /* 字体颜色 */
+    text-align: center;   
+    /* 水平居中 */
     }
+.inputdiv{
+    height:10%;
+    width: 100%;
+    background:rgb(145, 255, 0);
+    align-items: center;
+    display:flex; 
+
+}
+.inputdiv .neiinput{
+    padding-left: 40px;
+    width:60%;
+    
+}
+.inputdiv .neiinput input{
+    width:100%;
+    height:20px;
+}
+.inputdiv .inputbuttonsou{
+    width: 20%;
+    padding-left: 20px;
+   
+   
+}
+.inputdiv .inputbuttonsou button{
+    font-size:20px;
+
+}
+.listdivv{
+    height:60%;
+    width:100%;
+    background: rgb(0, 255, 85);
+    padding-left: 40px;
+  
+
+}
+.listdivv .listdiv{
+    height:15%;
+    width:100%;
+}
+

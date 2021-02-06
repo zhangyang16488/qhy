@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HeadComponent } from './head/head.component';
 import{NewComponent} from './new/new.component';
 import{MessageComponent} from './message/message.component';
+import{MessagedetailComponent} from './messagedetail/messagedetail.component';
+
 
 
 
