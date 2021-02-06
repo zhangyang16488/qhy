@@ -52,8 +52,8 @@ openadd(): void {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log("rwerwe")
-      console.log(result)
+    
+    
     });
 
 
