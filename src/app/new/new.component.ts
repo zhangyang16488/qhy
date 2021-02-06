@@ -10,7 +10,7 @@ import { MessagedetailComponent } from '../messagedetail/messagedetail.component
   styleUrls: ['./new.component.css']
 })
 export class NewComponent implements OnInit {
-  nameere=true;
+  nameere:boolean= true;
   list:any=[
     { "name": "书名", "age": 1 },
   { "name": "书名2", "age": 2 },
@@ -39,16 +39,24 @@ openadd(): void {
    
   });
   dialogRef.afterClosed().subscribe(result => {
-    console.log('The dialog was closed');
-   
+    console.log("rwerwe")
+      console.log(result)
+    this.list.push(result);
   });
   };
-  deleteThis(): void {
+  deleteThis(event:any){
     const dialogRef = this.dialog.open( MessagedetailComponent ,{
       width: '2500px',
       height:'500px',
-     
+      data: event
     });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log("rwerwe")
+      console.log(result)
+    });
+
+
   }
   
 sou(){
@@ -56,7 +64,6 @@ sou(){
 
   let newany=[]
     for(let i=0;i<this.list.length;i++){
-    
      if( this.list[i].name==this.inputzhi){
     newany=this.list[i]
     this.list=[]
