@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatButtonModule} from '@angular/material/button';
+import {MatButtonToggleModule} from'@angular/material/button-toggle';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeadComponent } from './head/head.component';
@@ -15,6 +17,8 @@ import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-
 import { FormsModule }   from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { WwwComponent } from './www/www.component';
+
 
 @NgModule({
   declarations: [
@@ -24,10 +28,18 @@ import { MatInputModule } from '@angular/material/input';
     MessagedetailComponent,
     NewComponent,
     // MatDialogModule,
-    DialogOverviewExampleDialogComponent
+    DialogOverviewExampleDialogComponent,
+    WwwComponent,
+    // MatBottomSheetModule,
+    // MatButtonModule,
+    // MatButtonToggleModule,
  
   ],
   imports: [
+     MatBottomSheetModule,
+    // MatButtonModule,
+    MatButtonToggleModule,
+    MatButtonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -37,6 +49,8 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     MatInputModule,
     // RouterModule.forRoot([{path:'head', component: HeadComponent}])
+  ],entryComponents: [
+    MessagedetailComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

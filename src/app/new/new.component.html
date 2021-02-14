@@ -1,19 +1,48 @@
-<!-- 
-<div *ngFor="let course of list" >
-    <div><div>
-   {{course.age}} 
-   
-   
-   {{course.name}}
-     </div></div>
-   
-  </div>   -->
-<div id="kuangjia">
-  <h1>  图书管理系统</h1>
-  <div class="sousuo">
-    <i class="fa fa-github-alt" style="font-size:24px"></i>
-    <input type="text" placeholder={{sousuoo}} (keyup)="ss($event)"/>
-    <button (click)="qqq()"> 确认</button>
-   
+<div class="main">
 
+<div class="titlediv">
+  <div>图书管理系统</div>
 </div>
+
+<div class="inputdiv">
+  <div class="neiinput">
+     <input type="text" (keyup)="bookselect($event)">
+    </div>
+    <div class="inputbuttonsou">
+      <button (click)="sou()">搜索</button>
+       </div>
+       <div class="inputbuttonadd">
+        <div>
+          <button (click)="openadd()">添加</button>
+        </div>
+       </div>
+     </div>
+
+<div class="listdivv">
+  <div *ngFor="let course of list" class="listdiv">
+    <div *ngIf="nameere">
+      <div class="div1">
+   {{course.name}} {{course.age}} 
+   
+   <button (click)="deleteThis(course)">修改</button>
+   <button (click)="deleteThis2()">删除</button>
+
+    </div>
+
+    <!-- <div class="div2">
+    <button (click1)="deleteThis">添加</button>
+    <button (click)="deleteThis2">修改</button>
+  </div> -->
+
+  </div>
+    </div>
+    </div>
+   </div>
+
+
+ 
+
+
+      
+
+   
