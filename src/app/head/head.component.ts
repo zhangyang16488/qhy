@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { from } from 'rxjs';
+import { HttpClient } from "@angular/common/http" 
+import { HttpHeaders } from '@angular/common/http';
+// import {Http} from '@angular/http';
 import { Router} from '@angular/router';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { DialogOverviewExampleDialogComponent } from '../dialog-overview-example-dialog/dialog-overview-example-dialog.component';
@@ -15,13 +18,15 @@ export interface DialogData {
 export class HeadComponent {
   animal:string=""
   namee:string=""
-
+list:any=[]
   yza=""
   yzm="请输入验证码"
   name="请输入用户名"
   password="请输入密码"
 
-  constructor( public dialog: MatDialog,
+  constructor( 
+     private http: HttpClient,
+     public dialog: MatDialog,
     private router: Router){}
   openDialog(): void {
      console.log(this.namee)
@@ -76,6 +81,18 @@ title = 'myapp';
             this.router.navigate( ['/new']);
           }else
             console.log('nonono')
+          }
+          ngOnInit(){
+            console.log("fdsfs")
+            // this.gethttp.
+  console.log(this.http)
+
+  this.http.get("http://localhost:9095/all")
+  .subscribe(res=>{ 
+    console.log(res)
+    this.list=res
+   })
+  
           }
         }
         

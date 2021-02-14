@@ -9,6 +9,7 @@ import{MessagedetailComponent} from './messagedetail/messagedetail.component';
 
 
 const routes: Routes = [
+  {path: '',component: HeadComponent},
   {path: 'head',component: HeadComponent},
   {path: 'new',component: NewComponent},
   {path: 'message',component: MessageComponent}
