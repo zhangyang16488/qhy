@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { from } from 'rxjs';
 import { Router} from '@angular/router';
+import { HttpClient } from "@angular/common/http" ;
+import { HttpHeaders } from '@angular/common/http';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { DialogOverviewExampleDialogComponent } from '../dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 export interface DialogData {
@@ -21,7 +23,7 @@ export class HeadComponent {
   name="请输入用户名"
   password="请输入密码"
 
-  constructor( public dialog: MatDialog,
+  constructor( private http: HttpClient,public dialog: MatDialog,
     private router: Router){}
   openDialog(): void {
      console.log(this.namee)
@@ -68,6 +70,26 @@ title = 'myapp';
           this.password=event.target.value
           
         }
+     ngOnInit(){
+      const httpOptions = {
+        headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+      };
+      this.http.post("http://localhost:9095/update",{ 
+        "phone":2313210,"email":"313123213@qq.com",
+        "name": "昂儿啊",
+        // "update_at": this.datePipe.transform(a,"yyyy-MM-dd")
+    },httpOptions,
+     ).subscribe(response => {
+        console.log(response);
+       
+      });
+    
+    
+    
+
+     }
+        
+  
 
     ccc(){
           // this.router.navigate( ['/new']);
@@ -77,6 +99,7 @@ title = 'myapp';
           }else
             console.log('nonono')
           }
+          
         }
         
           

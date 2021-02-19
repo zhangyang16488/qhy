@@ -18,6 +18,11 @@ import { FormsModule }   from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { WwwComponent } from './www/www.component';
+import {HttpClientModule} from "@angular/common/http";
+
+
+
+
 
 
 @NgModule({
@@ -36,6 +41,7 @@ import { WwwComponent } from './www/www.component';
  
   ],
   imports: [
+    HttpClientModule,
      MatBottomSheetModule,
     // MatButtonModule,
     MatButtonToggleModule,
