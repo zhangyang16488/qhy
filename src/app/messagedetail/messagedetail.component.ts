@@ -4,7 +4,7 @@ import { HttpClient } from "@angular/common/http" ;
 import { HttpHeaders } from '@angular/common/http';
 
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { threadId } from 'worker_threads';
+
 export interface DialogData {
   name: string;
   age: string;

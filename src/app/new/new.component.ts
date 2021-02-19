@@ -81,9 +81,9 @@ sou(){
 },httpOptions,
  ).subscribe(response => {
     console.log(response);
-    if(response.length!=0){
+    // if(response.length!=0){
     this.list=response
-  }
+  // }
   });
  
 
