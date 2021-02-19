@@ -4,27 +4,38 @@
     height: 100%; width: 100%;
     /* background-size:100% auto; */
 }
-#login-box{
+.login-box{
     background-image: url('/assets/c.jpg');
-    width:30%;
+    /* width:30%;
     height:auto;
     margin:0 auto;
-    /* margin-top:13%; */
+   
     text-align:center;
    
-    padding:20px 50px;
+    padding:20px 50px; */
+    position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	height: 500px;
+	width: 30%;
+    text-align:center;
+
     }
+
 #login-box h1{
     color:rgb(24, 22, 22);
 }
-#login-box .form .item{
+.login-box .form .item{
     margin-top:20px;
 }
-#login-box .form .item i{
+.login-box .form .item i{
     font-size:18px;
     color:rgb(202, 16, 16);
 }
-#login-box .form .item input{
+.login-box .form .item input{
     width:180px;
     font-size:18px;
     border:0;
@@ -33,7 +44,7 @@
     background:#ffffff00;
     color:rgb(223, 24, 24);
 }
-#login-box 	button{
+.login-box 	button{
     margin-top:20px;
     width:180px;
     height:30px;

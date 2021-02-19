@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -18,8 +19,13 @@ import { FormsModule }   from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { WwwComponent } from './www/www.component';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import {HttpClientModule} from "@angular/common/http"; 
+import {HttpClientModule} from "@angular/common/http";
+
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +42,7 @@ import {HttpClientModule} from "@angular/common/http";
  
   ],
   imports: [
+    HttpClientModule,
      MatBottomSheetModule,
     // MatButtonModule,
     MatButtonToggleModule,
@@ -48,14 +55,12 @@ import {HttpClientModule} from "@angular/common/http";
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    HttpClientModule,
     // RouterModule.forRoot([{path:'head', component: HeadComponent}])
   ],entryComponents: [
     MessagedetailComponent
   ],
-  providers: [ 
-    // { provide: LocationStrategy, useClass: HashLocationStrategy }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

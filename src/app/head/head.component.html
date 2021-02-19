@@ -1,14 +1,60 @@
 
- <div *ngFor="let course of list" class="listdiv">
-  
-    <div class="div1">
- {{course.name}} 
+<div class='ppp'>
+<!-- <div class='box'>
+        <div class='blur-modal'><img src="./assets/ccc.jpg">
+          <div> 描述文字 </div></div>
+        <div class='black-modal'> 描述文字 </div> -->
+       <!-- </div>  -->
+      <div class='box'></div>
 
- 
-  <!-- <div class="div2">
-  <button (click1)="deleteThis">添加</button>
-  <button (click)="deleteThis2">修改</button>
-</div> -->
+<div class="login-box">
+      <h1>账号登录</h1>
+      <div class="form">
 
-</div>
+        <div class="item">
+      
+           
+          <h2>账户 <input type="text"  placeholder={{name}} (keyup)="bb($event)"/></h2>
+     </div>
+
+    <div class="item">
+          
+          <h2> 密码<input type="text" placeholder={{password}} (keyup)="dd($event)"/></h2>
   </div>
+    <!-- <div class="aaa">
+        <input type="text" (keyup)="aa($event)"/>
+      </div>
+       <div>{{yzm}}<div> -->
+      <!-- <button (click)="bbb()">add</button> --> 
+      <!-- <button (click)="yz()">yz</button> -->
+
+      
+      <div>
+      <button (click)="ccc()">注册/登入</button>
+      <!-- <a [routerLink]="['/head']">消息</a> -->
+      </div>
+    
+    </div>
+    </div>
+    </div>
+    
+      <!-- <ol>
+                <li>
+                  <mat-form-field>
+                    <mat-label>What's your name?</mat-label>
+                    <input matInput="" [(ngModel)]="namee">
+                  </mat-form-field>
+                </li>
+                <li>
+                  <button mat-raised-button (click)="openDialog()">Pick one</button>
+                </li>
+                <li *ngIf="animal">
+                  You chose: <i>{{animal}}</i>
+                </li>
+              </ol>
+           -->
+          
+         
+
+  
+
