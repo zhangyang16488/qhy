@@ -1,5 +1,5 @@
 .ppp{
-    background-image: url('/assets/a.jpg');
+     background-image: url('/assets/a.jpg');
     background-repeat:no-repeat;
     height: 100%; width: 100%;
     /* background-size:100% auto; */
@@ -24,15 +24,16 @@
     text-align:center;
 
     }
-.login-box h1{
-    color:#fff;
+
+#login-box h1{
+    color:rgb(24, 22, 22);
 }
 .login-box .form .item{
     margin-top:20px;
 }
 .login-box .form .item i{
     font-size:18px;
-    color:#fff;
+    color:rgb(202, 16, 16);
 }
 .login-box .form .item input{
     width:180px;
@@ -41,7 +42,7 @@
     border-bottom:2px solid #fff;
     padding:5px 10px;
     background:#ffffff00;
-    color:#fff;
+    color:rgb(223, 24, 24);
 }
 .login-box 	button{
     margin-top:20px;
@@ -49,7 +50,7 @@
     height:30px;
     font-size:20px;
     font-weight:700;
-    color:#fff;
+    color:rgb(221, 25, 25);
     background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
     border:0;
     border-radius:15px;
@@ -92,5 +93,5 @@
 	position: absolute; height:50px; width:240px;
 	top: 280px;
 	background: rgba(0,0,0,.2);
-	color: white
+	color: rgb(219, 26, 26)
 }
