@@ -85,14 +85,14 @@ if(this.dengluname=="登陆"){
       const httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' })
       };
-      this.http.post("http://localhost:9095/chaxue",{ 
+      this.http.post("http://localhost:9095/usercha",{ 
        "username":this.name,
        "userpassword":this.password,
     },httpOptions,
      ).subscribe(response => {
       
         this.list=response
-        if(this.list.length!=0&&this.list[0].this.list[0].username==this.name&&this.password==this.list[0].username){
+        if(this.list.length!=0&&this.list[0].username==this.name&&this.password==this.list[0].userpassword){
           this.router.navigate( ['/new']);
 
         }else{
