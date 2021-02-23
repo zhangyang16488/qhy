@@ -18,7 +18,7 @@ export interface DialogData {
 export class HeadComponent {
   animal:string=""
   namee:string=""
-
+  list:any=[]
   yza=""
   yzm="请输入验证码"
   name="请输入用户名"
@@ -75,14 +75,17 @@ title = 'myapp';
       const httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' })
       };
-      this.http.post("http://localhost:9095/update",{ 
-        "phone":2313210,"email":"313123213@qq.com",
-        "name": "昂儿啊",
+      this.http.post("http://localhost:9095/cha",{ 
+       "id":66
         // "update_at": this.datePipe.transform(a,"yyyy-MM-dd")
     },httpOptions,
      ).subscribe(response => {
-        console.log(response);
-       
+      
+        this.list=response
+          console.log(this.list);
+      //  for(let i = 0; i < response.length; i++){
+
+      //  }
       });
     
     
