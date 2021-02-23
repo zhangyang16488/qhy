@@ -23,7 +23,7 @@ export class HeadComponent {
   yzm="请输入验证码"
   name="请输入用户名"
   password="请输入密码"
-
+  dengluname="登陆"
   constructor( private http: HttpClient,public dialog: MatDialog,
     private router: Router){}
   openDialog(): void {
@@ -72,23 +72,7 @@ title = 'myapp';
           
         }
      ngOnInit(){
-      const httpOptions = {
-        headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-      };
-      this.http.post("http://localhost:9095/cha",{ 
-       "id":66
-        // "update_at": this.datePipe.transform(a,"yyyy-MM-dd")
-    },httpOptions,
-     ).subscribe(response => {
-      
-        this.list=response
-          console.log(this.list);
-      //  for(let i = 0; i < response.length; i++){
-
-      //  }
-      });
-    
-    
+   
     
 
      }
@@ -96,13 +80,32 @@ title = 'myapp';
   
 
     ccc(){
-          // this.router.navigate( ['/new']);
-          if(this.name=='123456'||this.yza==this.yzm||this.password=='123456'){
-            console.log("dddd")
-            this.router.navigate( ['/new']);
-          }else
-            console.log('nonono')
-          }
+if(this.dengluname=="登陆"){
+
+      const httpOptions = {
+        headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+      };
+      this.http.post("http://localhost:9095/chaxue",{ 
+       "username":this.name,
+       "userpassword":this.password,
+    },httpOptions,
+     ).subscribe(response => {
+      
+        this.list=response
+        if(this.list.length!=0&&this.list[0].this.list[0].username==this.name&&this.password==this.list[0].username){
+          this.router.navigate( ['/new']);
+
+        }else{
+          this.dengluname="注册"
+        }
+     
+
+      });
+    }else{
+    console.log("tanchuang")
+
+    }
+    }
           
         }
         
