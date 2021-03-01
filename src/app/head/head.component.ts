@@ -20,7 +20,7 @@ export interface DialogData {
 export class HeadComponent {
   animal:string=""
   namee:string=""
-  list:any=[]
+
   yza=""
   yzm="请输入验证码"
   name=""
@@ -87,6 +87,7 @@ title = 'myapp';
       const httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' })
       };
+
       this.http.post("http://localhost:9095/usercha",{ 
        "username":this.name,
        "userpassword":this.password,
@@ -112,6 +113,7 @@ title = 'myapp';
         
         }
      
+
 
       });
     // }else{
