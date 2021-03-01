@@ -9,7 +9,7 @@ import { Router} from '@angular/router';
 export class AppComponent {
   yza=""
   yzm="请输入验证码"
-  name="请输入用户名"
+  name=""
   password="请输入密码"
   constructor( 
     private router: Router

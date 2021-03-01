@@ -11,15 +11,22 @@
       <h1>账号登录</h1>
       <div class="form">
 
-        <div class="item">
-      
+        <div class="item1">
+      <mat-form-field class="example-full-width">
+        <mat-label>请输入用户名</mat-label>
+        <input matInput placeholder={{name}} (keyup)="bb($event)">
+      </mat-form-field>
+      <div>
            
-          <h2>账户 <input type="text"  placeholder={{name}} (keyup)="bb($event)"/></h2>
-     </div>
-
-    <div class="item">
-          
-          <h2> 密码<input type="text" placeholder={{password}} (keyup)="dd($event)"/></h2>
+    <!--       <h2>账户 <input matInput  placeholder={{name}} (keyup)="bb($event)"/></h2> -->
+    <!-- <input matInput placeholder="Ex. Pizza" value="Sushi">
+    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+           placeholder="Ex. pat@example.com"> -->
+           <div class="item1">
+           <mat-form-field class="example-full-width">
+        <mat-label>请输入密码</mat-label>
+        <input matInput placeholder={{password}} (keyup)="dd($event)">
+      </mat-form-field>
   </div>
     <!-- <div class="aaa">
         <input type="text" (keyup)="aa($event)"/>
@@ -29,8 +36,10 @@
       <!-- <button (click)="yz()">yz</button> -->
 
       
-      <div>
-      <button (click)="ccc()">{{dengluname}}</button>
+      <div class="form3">
+       <button (click)="cccc()">注册</button>
+      <button (click)="ccc()">登录</button>
+   
     
       <!-- <a [routerLink]="['/head']">消息</a> -->
       </div>

@@ -20,9 +20,6 @@ inputzhi: string=""
 newany: string=""
 
 
-
-
-
 constructor(private http: HttpClient,public dialog: MatDialog) {
     
    }

@@ -4,6 +4,8 @@ import { from } from 'rxjs';
 import { Router} from '@angular/router';
 import { HttpClient } from "@angular/common/http" ;
 import { HttpHeaders } from '@angular/common/http';
+import { WwwComponent } from '../www/www.component';
+import { MessageComponent } from '../message/message.component';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { DialogOverviewExampleDialogComponent } from '../dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 export interface DialogData {
@@ -21,8 +23,8 @@ export class HeadComponent {
   list:any=[]
   yza=""
   yzm="请输入验证码"
-  name="请输入用户名"
-  password="请输入密码"
+  name=""
+  password=""
   dengluname="登陆"
   constructor( private http: HttpClient,public dialog: MatDialog,
     private router: Router){}
@@ -80,7 +82,7 @@ title = 'myapp';
   
 
     ccc(){
-if(this.dengluname=="登陆"){
+
 
       const httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -92,19 +94,53 @@ if(this.dengluname=="登陆"){
      ).subscribe(response => {
       
         this.list=response
+        console.log(this.list)
         if(this.list.length!=0&&this.list[0].username==this.name&&this.password==this.list[0].userpassword){
           this.router.navigate( ['/new']);
 
         }else{
-          this.dengluname="注册"
+          const dialogRef = this.dialog.open(MessageComponent, {
+                width: '300px',
+                height:'200px',
+                
+              });
+          
+              dialogRef.afterClosed().subscribe(result => {
+                console.log('The dialog was closed');
+                
+              });
+        
         }
      
 
       });
-    }else{
-    console.log("tanchuang")
+    // }else{
+    //   const dialogRef = this.dialog.open( WwwComponent, {
+    //     width: '500px',
+    //     height:'500px',
+        
+    //   });
+  
+    //   dialogRef.afterClosed().subscribe(result => {
+    //     console.log('The dialog was closed');
+    //     // this.animal = result;
+    //   });
+ 
 
+    // }
     }
+    cccc(){
+      const dialogRef = this.dialog.open(WwwComponent, {
+        width: '450px',
+        height:'350px',
+        
+      });
+  
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+        
+      });
+
     }
           
         }
