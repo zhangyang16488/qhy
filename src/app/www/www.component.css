@@ -1,0 +1,46 @@
+.main{
+    height: 100%;
+    width:100%;
+}
+.main .first{
+    height: 70%;
+    width: 100%;
+    text-align: center; 
+
+    /* align-items: center; */
+}
+.main .first .first1{
+  
+    height:35%;
+    width: 100%;
+  /* padding-left: 50px; */
+    padding-top:10%;
+}
+.main .first .first1 input{
+   
+   
+    font-size:20px;
+}
+.main .first .first2{
+    height:35%;
+    width: 100%;
+    
+    padding-top:10%;
+}
+.main .first .first2 input{
+    /* height:50%;
+    width: 50%; */
+    font-size:20px;
+
+}
+.main .first3{
+    height:40%;
+    width: 100%;
+    text-align: center; 
+    padding-top:10%;
+ 
+    
+}
+.main .first3 button{
+ 
+}

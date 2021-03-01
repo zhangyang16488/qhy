@@ -1,0 +1,14 @@
+.main{
+    height:100%;
+    width: 100%;
+}
+.main .title{
+    height:60%;
+    width: 100%;
+    text-align: center; 
+}
+.main .button{
+    height: 40%;
+    width: 100%;
+    text-align: center; 
+}
